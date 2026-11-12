@@ -1,91 +1,167 @@
-!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 
-<body style="background-color:orange">
+<head>
+<style>
+    body {
+        background-color: #29190F;
+        color: #FFF1DF;
+        font-family: Verdana, sans-serif;
+        font-size: 19px;
+        line-height: 1.8;
+        margin: 25px;
+    }
 
-<p style="text-align:center;font-size:24px;">🤘 🖖 🫵 💪 🤘 🖖 🫵 💪 🤘</p>
+    h1 {
+        color: #FFB45C;
+        font-size: 42px;
+        text-align: center;
+        cursor: pointer;
+    }
 
-<h1 id="ultimateTitle" style="color:white;font-family:verdana;text-align:center;">🤘 Information 🤘</h1>
+    p {
+        text-align: center;
+    }
 
-<p style="text-align:center;font-size:20px;color:white;">💪 Welcome to my Information page! 💪</p>
+    .decorations {
+        font-size: 30px;
+    }
 
-<p style="text-align:center;font-size:16px;color:white;">Dandys World is a multiplayer survival game created by BlushCrush Studio. Players complete floors by completing machines to assist themselves into higher floors.</p>
+    .welcome {
+        font-size: 25px;
+        color: #FFD09A;
+    }
 
-<p style="text-align:center;font-size:16px;color:white;">Toons have six quests called mastery which when completed, they recieve a skin which is grey, black and white which is called a "Vintage Skin".</p>
+    .description {
+        font-size: 20px;
+        color: #FFF1DF;
+        max-width: 1000px;
+        margin: 25px auto;
+    }
 
-<p style="text-align:center;font-size:16px;color:white;">My name is Molly Green and I was in Grade 8 when I was assigned this for a Digital Boss project.</p>
+    .thankyou {
+        font-size: 23px;
+        color: #FFB45C;
+        font-weight: bold;
+    }
 
-<p style="text-align:center;font-size:16px;color:white;">Dandys World was created by Qwelver, who is the creator, developer, and creative director of BlushCrush Studio, the Roblox studio behind Flavour Frenzy and a former Dandys World producer.</p>
+    .music-title {
+        font-size: 22px;
+        color: #FFD09A;
+    }
 
-<p style="text-align:center;font-size:16px;color:white;">Thank you for looking at my Dandys World project!</p>
+    .button {
+        background-color: #D97724;
+        color: white;
+        padding: 16px 30px;
+        font-size: 19px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
 
-<p style="text-align:center;color:white;">🎵 Information Music 🎵</p>
+    .button:hover {
+        background-color: #FFB45C;
+        color: #29190F;
+    }
 
-<p style="text-align:center;">
+    audio {
+        width: 300px;
+        max-width: 100%;
+    }
 
+    #goob {
+        color: #29190F;
+        font-size: 12px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<p class="decorations">
+🤘 🖖 🫵 💪 🤘 🖖 🫵 💪 🤘
+</p>
+
+<h1 id="ultimateTitle">
+🤘 Information 🤘
+</h1>
+
+<p class="welcome">
+💪 Welcome to my Information page! 💪
+</p>
+
+<p class="description">
+Dandys World is a multiplayer survival game created by BlushCrush Studio. Players complete floors by completing machines to assist themselves into higher floors.
+</p>
+
+<p class="description">
+Toons have six quests called mastery which when completed, they recieve a skin which is grey, black and white which is called a "Vintage Skin".
+</p>
+
+<p class="description">
+My name is Molly Green and I was in Grade 8 when I was assigned this for a Digital Boss project.
+</p>
+
+<p class="description">
+Dandys World was created by Qwelver, who is the creator, developer, and creative director of BlushCrush Studio, the Roblox studio behind Flavour Frenzy and a former Dandys World producer.
+</p>
+
+<p class="thankyou">
+Thank you for looking at my Dandys World project!
+</p>
+
+<p class="music-title">
+🎵 Information Music 🎵
+</p>
+
+<p>
 <audio controls autoplay loop>
-
 <source src="music.mp3" type="audio/mpeg">
-
 </audio>
-
 </p>
 
-<p style="text-align:center;">
-
+<p>
 <a href="index.htm">
-
-<button style="background-color:black;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;">
-
+<button class="button">
 🫵 🏠 Back to Home 🏠 🫵
-
 </button>
-
 </a>
-
 </p>
 
-<p style="text-align:center;font-size:24px;color:white;">🤘 💪 🖖 🫵 💪 🤘 🖖 🫵 🤘</p>
+<p class="decorations">
+🤘 💪 🖖 🫵 💪 🤘 🖖 🫵 🤘
+</p>
 
-<p id="goob" style="text-align:center;color:orange;font-size:8px;">🩷</p>
+<p id="goob">
+🩷
+</p>
 
 <script>
-
 let goobClicks = 0;
 
 document.getElementById("goob").addEventListener("click", function() {
+    goobClicks++;
 
-goobClicks++;
-
-if (goobClicks >= 5) {
-
-window.location.href = "goobsecret.html";
-
-}
-
+    if (goobClicks >= 5) {
+        window.location.href = "goobsecret.html";
+    }
 });
-
 </script>
 
 <script>
-
 let ultimateClicks = 0;
 
 document.getElementById("ultimateTitle").addEventListener("click", function() {
+    ultimateClicks++;
 
-ultimateClicks++;
-
-if (ultimateClicks >= 5) {
-
-window.location.href = "ultimate.html";
-
-}
-
+    if (ultimateClicks >= 5) {
+        window.location.href = "ultimate.html";
+    }
 });
-
 </script>
 
 </body>
-
 </html>
