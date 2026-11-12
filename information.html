@@ -2,14 +2,27 @@
 <html>
 
 <head>
+<title>Dandy's World Information</title>
+
 <style>
     body {
-        background-color: #29190F;
+        background: linear-gradient(135deg, #1B100B, #4A2816, #21130D);
         color: #FFF1DF;
         font-family: Verdana, sans-serif;
-        font-size: 19px;
+        font-size: 17px;
         line-height: 1.8;
-        margin: 25px;
+        margin: 0;
+        padding: 25px;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 25px auto;
+        padding: 35px;
+        background: rgba(25, 14, 8, 0.9);
+        border: 2px solid #D97724;
+        border-radius: 25px;
+        box-shadow: 0 0 30px rgba(255, 157, 64, 0.3);
     }
 
     h1 {
@@ -17,6 +30,12 @@
         font-size: 42px;
         text-align: center;
         cursor: pointer;
+        text-shadow: 0 0 12px #D97724;
+        transition: 0.3s;
+    }
+
+    h1:hover {
+        text-shadow: 0 0 22px #FFB45C;
     }
 
     p {
@@ -24,62 +43,144 @@
     }
 
     .decorations {
-        font-size: 30px;
+        font-size: 28px;
+        letter-spacing: 5px;
     }
 
     .welcome {
-        font-size: 25px;
+        font-size: 24px;
         color: #FFD09A;
+        font-weight: bold;
     }
 
     .description {
-        font-size: 20px;
+        background: rgba(255, 180, 92, 0.08);
+        border-left: 4px solid #D97724;
+        border-radius: 12px;
+        padding: 20px;
         color: #FFF1DF;
-        max-width: 1000px;
-        margin: 25px auto;
+        max-width: 750px;
+        margin: 22px auto;
+        text-align: left;
+        transition: 0.3s;
+    }
+
+    .description:hover {
+        background: rgba(255, 180, 92, 0.15);
+        transform: translateY(-3px);
     }
 
     .thankyou {
         font-size: 23px;
         color: #FFB45C;
         font-weight: bold;
+        margin-top: 40px;
+        text-shadow: 0 0 8px #D97724;
+    }
+
+    .music-box {
+        background: rgba(255, 180, 92, 0.08);
+        border: 1px solid #D97724;
+        border-radius: 18px;
+        padding: 20px;
+        margin: 30px auto;
+        max-width: 400px;
+        box-shadow: 0 0 12px rgba(217, 119, 36, 0.15);
     }
 
     .music-title {
-        font-size: 22px;
+        font-size: 21px;
         color: #FFD09A;
+        font-weight: bold;
+    }
+
+    audio {
+        width: 100%;
+        max-width: 300px;
     }
 
     .button {
-        background-color: #D97724;
-        color: white;
-        padding: 16px 30px;
-        font-size: 19px;
+        background: linear-gradient(135deg, #D97724, #FFB45C);
+        color: #29190F;
+        padding: 16px 32px;
+        font-size: 17px;
         font-weight: bold;
         border: none;
         border-radius: 25px;
         cursor: pointer;
+        transition: 0.3s;
     }
 
     .button:hover {
-        background-color: #FFB45C;
-        color: #29190F;
+        transform: scale(1.06);
+        box-shadow: 0 0 18px #FFB45C;
     }
 
-    audio {
-        width: 300px;
-        max-width: 100%;
+    .hint-box {
+        background: rgba(255, 180, 92, 0.06);
+        border: 1px dashed #B87942;
+        border-radius: 15px;
+        padding: 15px;
+        max-width: 600px;
+        margin: 18px auto;
+    }
+
+    .hint {
+        color: #FFD09A;
+        font-size: 14px;
+        font-style: italic;
+        margin: 5px;
     }
 
     #goob {
-        color: #29190F;
-        font-size: 12px;
+        color: #FFB45C;
+        font-size: 30px;
         cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+    }
+
+    #goob:hover {
+        transform: scale(1.3) rotate(10deg);
+        filter: drop-shadow(0 0 8px pink);
+    }
+
+    .heart-hint {
+        color: #E8B9A0;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .footer {
+        color: #C99B75;
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+
+        .container {
+            padding: 18px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .decorations {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
     }
 </style>
 </head>
 
 <body>
+
+<div class="container">
 
 <p class="decorations">
 🤘 🖖 🫵 💪 🤘 🖖 🫵 💪 🤘
@@ -94,34 +195,36 @@
 </p>
 
 <p class="description">
-Dandys World is a multiplayer survival game created by BlushCrush Studio. Players complete floors by completing machines to assist themselves into higher floors.
+Dandy's World is a multiplayer survival game created by BlushCrunch Studio. Players complete machines on each floor to help themselves progress to higher floors.
 </p>
 
 <p class="description">
-Toons have six quests called mastery which when completed, they recieve a skin which is grey, black and white which is called a "Vintage Skin".
+Toons have six mastery quests. When completed, they receive a special skin called a "Vintage Skin", which is grey, black and white.
 </p>
 
 <p class="description">
-My name is Molly Green and I was in Grade 8 when I was assigned this for a Digital Boss project.
+This website was created by DandysWorldsBiggestFanEverYall, who was in Grade 8 when assigned this for a Digital Boss project.
 </p>
 
 <p class="description">
-Dandys World was created by Qwelver, who is the creator, developer, and creative director of BlushCrush Studio, the Roblox studio behind Flavour Frenzy and a former Dandys World producer.
+Dandy's World was created by Qwelver, who is the creator, developer, and creative director of BlushCrunch Studio, the Roblox studio behind Flavour Frenzy and a former Dandy's World producer.
 </p>
 
 <p class="thankyou">
-Thank you for looking at my Dandys World project!
+✨ Thank you for looking at my Dandy's World project! ✨
 </p>
+
+<div class="music-box">
 
 <p class="music-title">
 🎵 Information Music 🎵
 </p>
 
-<p>
 <audio controls autoplay loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
-</p>
+
+</div>
 
 <p>
 <a href="index.htm">
@@ -135,9 +238,36 @@ Thank you for looking at my Dandys World project!
 🤘 💪 🖖 🫵 💪 🤘 🖖 🫵 🤘
 </p>
 
+<div class="hint-box">
+
 <p id="goob">
 🩷
 </p>
+
+<p class="heart-hint">
+Somebody might have left a little something behind...
+Look closely. Even the smallest things can hold secrets. 💗
+</p>
+
+</div>
+
+<div class="hint-box">
+
+<p class="hint">
+Think you've discovered everything?
+The title above might be more interesting than it looks...
+Give it a little attention. 😉
+</p>
+
+</div>
+
+<p class="footer">
+Dandy's World Fan Project
+<br>
+Made with 💛 by DandysWorldsBiggestFanEverYall
+</p>
+
+</div>
 
 <script>
 let goobClicks = 0;
@@ -149,9 +279,7 @@ document.getElementById("goob").addEventListener("click", function() {
         window.location.href = "goobsecret.html";
     }
 });
-</script>
 
-<script>
 let ultimateClicks = 0;
 
 document.getElementById("ultimateTitle").addEventListener("click", function() {
