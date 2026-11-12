@@ -1,58 +1,54 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 
- <html> 
+<html>
 
- <body style="background-color:orange"> 
+<body style="background-color:orange">
 
- <p style="text-align:center;font-size:24px;">🤘 🖖 🫵 💪 🤘 🖖 🫵 💪 🤘</p> 
+<p style="text-align:center;font-size:24px;"> <span id="rock" style="cursor:pointer;">🤘</span> <span id="peace" style="cursor:pointer;">🖖</span> <span id="point" style="cursor:pointer;">🫵</span> <span id="muscle" style="cursor:pointer;">💪</span> 🤘 🖖 🫵 💪 🤘 </p>
 
- <h1 style="color:white;font-family:verdana;text-align:center;">🤘 Information 🤘</h1> 
+<h1 style="color:white;font-family:verdana;text-align:center;">🤘 Information 🤘</h1>
 
- <p style="text-align:center;font-size:20px;color:white;">💪 Welcome to my Information page! 💪</p> 
+<p style="text-align:center;font-size:20px;color:white;">💪 Welcome to my Information page! 💪</p>
 
- <p style="text-align:center;font-size:16px;color:white;">Dandys World is a multiplayer survival game created by BlushCrush Studio. Players complete floors by completing machines to assist themselves into higher floors.</p> 
+<p style="text-align:center;font-size:16px;color:white;">Dandys World is a multiplayer survival game created by BlushCrush Studio. Players complete floors by completing machines to assist themselves into higher floors.</p>
 
- <p style="text-align:center;font-size:16px;color:white;">Toons have six quests called mastery which when completed, they recieve a skin which is grey, black and white which is called a "Vintage Skin".</p> 
+<p style="text-align:center;font-size:16px;color:white;">Toons have six quests called mastery which when completed, they recieve a skin which is grey, black and white which is called a "Vintage Skin".</p>
 
- <p style="text-align:center;font-size:16px;color:white;">My name is Molly Green and I was in Grade 8 when I was assigned this for a Digital Boss project.</p> 
+<p style="text-align:center;font-size:16px;color:white;">My name is Molly Green and I was in Grade 8 when I was assigned this for a Digital Boss project.</p>
 
- <p style="text-align:center;font-size:16px;color:white;">Dandys World was created by Qwelver, who is the creator, developer, and creative director of BlushCrush Studio, the Roblox studio behind Flavour Frenzy and a former Dandys World producer.</p> 
+<p style="text-align:center;font-size:16px;color:white;">Dandys World was created by Qwelver, who is the creator, developer, and creative director of BlushCrush Studio, the Roblox studio behind Flavour Frenzy and a former Dandys World producer.</p>
 
- <p style="text-align:center;font-size:16px;color:white;">Thank you for looking at my Dandys World project!</p> 
+<p style="text-align:center;font-size:16px;color:white;">Thank you for looking at my Dandys World project!</p>
 
- <p style="text-align:center;color:white;">🎵 Information Music 🎵</p> 
+<p style="text-align:center;color:white;">🎵 Information Music 🎵</p>
 
- <p style="text-align:center;"> 
+<p style="text-align:center;">
 
- <audio controls autoplay loop> 
+<audio controls autoplay loop>
 
- <source src="music.mp3" type="audio/mpeg"> 
+<source src="music.mp3" type="audio/mpeg">
 
- </audio> 
+</audio>
 
- </p> 
+</p>
 
- <p style="text-align:center;"> 
+<p style="text-align:center;">
 
- <a href="index.htm"> 
+<a href="index.htm">
 
- <button style="background-color:black;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;"> 
+<button style="background-color:black;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;">
 
- 🫵 🏠 Back to Home 🏠 🫵 
+🫵 🏠 Back to Home 🏠 🫵
 
- </button> 
+</button>
 
- </a> 
+</a>
 
- </p> 
+</p>
 
- <p style="text-align:center;font-size:24px;color:white;">🤘 💪 🖖 🫵 💪 🤘 🖖 🫵 🤘</p> 
+<p style="text-align:center;font-size:24px;color:white;">🤘 💪 🖖 🫵 💪 🤘 🖖 🫵 🤘</p>
 
-
-
-<p id="goob" style="text-align:center;color:orange;font-size:8px;">🩷</p> 
-
-
+<p id="goob" style="text-align:center;color:orange;font-size:8px;">🩷</p>
 
 <script> let goobClicks = 0;
 
@@ -64,24 +60,24 @@ if (goobClicks >= 5) { window.location.href = "goobsecret.html"; }
 
 }); </script>
 
+<script> let secretSequence = "";
 
+document.getElementById("rock").addEventListener("click", function() { secretSequence += "R"; checkSecret(); });
 
+document.getElementById("peace").addEventListener("click", function() { secretSequence += "V"; checkSecret(); });
 
+document.getElementById("point").addEventListener("click", function() { secretSequence += "P"; checkSecret(); });
 
-<script> let secretWord = "";
+document.getElementById("muscle").addEventListener("click", function() { secretSequence += "M"; checkSecret(); });
 
-document.addEventListener("keydown", function(event) {
+function checkSecret() {
 
-secretWord += event.key.toUpperCase();
+if ( secretSequence.includes("R") && secretSequence.includes("V") && secretSequence.includes("P") && secretSequence.includes("M") ) { window.location.href = "ultimate.html"; }
 
-if (secretWord.includes("GOOB")) { window.location.href = "ultimate.html"; }
+if (secretSequence.length > 20) { secretSequence = secretSequence.slice(-20); }
 
-if (secretWord.length > 20) { secretWord = secretWord.slice(-20); }
+} </script>
 
-}); </script>
+</body>
 
-
-
- </body> 
-
- </html>
+</html>
