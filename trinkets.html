@@ -1,65 +1,81 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 
-<html>
+ <html> 
 
-<body style="background-color:khaki">
+ <body style="background-color:khaki"> 
 
-<p style="text-align:center;font-size:24px;">💎 🎒 ⭐ 🏆 💎 🎒 ⭐ 🏆 💎</p>
+ <p style="text-align:center;font-size:24px;">💎 🎒 ⭐ 🏆 💎 🎒 ⭐ 🏆 💎</p> 
 
-<h1 style="color:darkgreen;font-family:verdana;text-align:center;">💎 Trinkets 💎</h1>
+ <h1 id="trinketTitle" style="color:darkgreen;font-family:verdana;text-align:center;">💎 Trinkets 💎</h1> 
 
-<p style="text-align:center;font-size:20px;">⭐ Welcome to my Trinkets page! ⭐</p>
+ <p style="text-align:center;font-size:20px;">⭐ Welcome to my Trinkets page! ⭐</p> 
 
-<p style="text-align:center;font-size:14px;">Trinkets are special items which increase extraction speed, skillcheck, stealth, stamina speed stats, give items, give tapes to purchase items from Dandys Elevator Shop, highlight items, assist with machines by giving a kick start, and to protect you.</p>
+ <p style="text-align:center;font-size:14px;">Trinkets are special items which increase extraction speed, skillcheck, stealth, stamina speed stats, give items, give tapes to purchase items from Dandys Elevator Shop, highlight items, assist with machines by giving a kick start, and to protect you.</p> 
 
-<p style="text-align:center;font-size:14px;">Some trinkets are gained from being bought from Dandy's Lobby Shop, and some are recieved from completing a toons research by getting in contact with the twisted (the twisted chasing you or taking off one of your hearts) and picking up a research capsule.</p>
+ <p style="text-align:center;font-size:14px;">Some trinkets are gained from being bought from Dandy's Lobby Shop, and some are recieved from completing a toons research by getting in contact with the twisted (the twisted chasing you or taking off one of your hearts) and picking up a research capsule.</p> 
 
-<p style="text-align:center;">
+ <p style="text-align:center;"> 
 
-<a href="information.html">
+ <a href="information.html"> 
 
-<button style="background-color:darkorange;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;">
+ <button style="background-color:darkorange;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;"> 
 
-📖 ⭐ Information ⭐ 📖
+ 📖 ⭐ Information ⭐ 📖 
 
-</button>
+ </button> 
 
-</a>
+ </a> 
 
-</p>
+ </p> 
 
-<p style="text-align:center;">
+ <p style="text-align:center;"> 
 
-🎵 Trinket Music 🎵
+ 🎵 Trinket Music 🎵 
 
-</p>
+ </p> 
 
-<p style="text-align:center;">
+ <p style="text-align:center;"> 
 
-<audio controls autoplay loop>
+ <audio controls autoplay loop> 
 
-<source src="music.mp3" type="audio/mpeg">
+ <source src="music.mp3" type="audio/mpeg"> 
 
-</audio>
+ </audio> 
 
-</p>
+ </p> 
 
-<p style="text-align:center">
+ <p style="text-align:center"> 
 
-<a href="index.htm">
+ <a href="index.htm"> 
 
-<button style="background-color:darkgreen;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;">
+ <button style="background-color:darkgreen;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;"> 
 
-🏠 💎 Back to Home 💎 🏠
+ 🏠 💎 Back to Home 💎 🏠 
 
-</button>
+ </button> 
 
-</a>
+ </a> 
 
-</p>
+ </p> 
 
-<p style="text-align:center;font-size:24px;">🏆 ⭐ 💎 🎒 ⭐ 🏆 💎 🎒 ⭐</p>
+ <p style="text-align:center;font-size:24px;">🏆 ⭐ 💎 🎒 ⭐ 🏆 💎 🎒 ⭐</p> 
 
-</body>
 
-</html>
+
+<script> 
+ let secretClicks = 0; 
+
+ document.getElementById("trinketTitle").addEventListener("click", function() { 
+ secretClicks++; 
+
+ if (secretClicks >= 3) { 
+ window.location.href = "gigisecret.html"; 
+ } 
+ }); 
+ </script>
+
+
+
+ </body> 
+
+ </html>
