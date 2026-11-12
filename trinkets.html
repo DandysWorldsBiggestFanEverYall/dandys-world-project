@@ -2,121 +2,410 @@
 <html>
 
 <head>
+<title>Dandy's World - Trinkets</title>
+
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        background-color: #211638;
+        background:
+            radial-gradient(circle at top, #53347D, transparent 45%),
+            linear-gradient(135deg, #100B20, #211638, #0D0819);
         color: #F1E8FF;
         font-family: Verdana, sans-serif;
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.8;
-        margin: 25px;
+        margin: 0;
+        padding: 25px 15px;
+        min-height: 100vh;
     }
 
-    h1 {
-        color: #D6B4FF;
-        font-size: 42px;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    p {
+    .container {
+        max-width: 1000px;
+        margin: 25px auto;
+        padding: 35px 25px;
+        background: rgba(29, 17, 53, 0.92);
+        border: 2px solid #9664C9;
+        border-radius: 30px;
+        box-shadow:
+            0 0 30px rgba(180, 120, 255, 0.2),
+            inset 0 0 25px rgba(198, 155, 255, 0.04);
         text-align: center;
     }
 
     .decorations {
-        font-size: 30px;
+        font-size: 27px;
+        letter-spacing: 6px;
+        color: #E5C9FF;
+        text-shadow: 0 0 12px #B47AFF;
+    }
+
+    .top-label {
+        display: inline-block;
+        background: rgba(198, 155, 255, 0.1);
+        border: 1px solid #C69BFF;
+        border-radius: 30px;
+        padding: 7px 20px;
+        color: #DCC0FF;
+        font-size: 13px;
+        letter-spacing: 3px;
+        margin-top: 15px;
+    }
+
+    h1 {
+        color: #D6B4FF;
+        font-size: 46px;
+        text-align: center;
+        cursor: pointer;
+        text-shadow:
+            0 0 12px #A66BDB,
+            0 0 25px rgba(198, 155, 255, 0.5);
+        margin: 20px 0;
+        transition: 0.3s;
+    }
+
+    h1:hover {
+        transform: scale(1.04);
+        text-shadow: 0 0 25px #D6B4FF;
     }
 
     .welcome {
-        font-size: 25px;
+        font-size: 24px;
         color: #E5C9FF;
+        font-weight: bold;
     }
 
     .description {
-        font-size: 19px;
-        max-width: 950px;
+        font-size: 17px;
+        color: #F1E8FF;
+        max-width: 850px;
         margin: 20px auto;
     }
 
-    .button {
-        background-color: #A66BDB;
-        color: white;
-        padding: 16px 30px;
-        font-size: 19px;
-        font-weight: bold;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
+    .intro-panel {
+        background: rgba(166, 107, 219, 0.1);
+        border: 1px solid #8053B5;
+        border-radius: 22px;
+        padding: 22px;
+        max-width: 850px;
+        margin: 25px auto;
     }
 
-    .button:hover {
-        background-color: #C69BFF;
-        color: #211638;
+    .divider {
+        width: 75%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #C69BFF, transparent);
+        margin: 35px auto;
+    }
+
+    .section-title {
+        font-size: 27px;
+        color: #D6B4FF;
+        font-weight: bold;
+        text-shadow: 0 0 12px rgba(198, 155, 255, 0.4);
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 18px;
+        max-width: 900px;
+        margin: 25px auto;
+    }
+
+    .feature-card {
+        background: linear-gradient(145deg, #3C285F, #241639);
+        border: 1px solid #9466C7;
+        border-radius: 20px;
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: #D6B4FF;
+        box-shadow: 0 0 18px rgba(198, 155, 255, 0.25);
+    }
+
+    .feature-card h3 {
+        color: #E5C9FF;
+        font-size: 19px;
+        margin-top: 0;
+    }
+
+    .feature-card p {
+        color: #F1E8FF;
+        font-size: 15px;
+    }
+
+    .guide-panel {
+        background: linear-gradient(135deg, #38234F, #211638);
+        border: 2px solid #A66BDB;
+        border-radius: 24px;
+        padding: 25px;
+        max-width: 850px;
+        margin: 25px auto;
+        box-shadow: 0 0 20px rgba(166, 107, 219, 0.12);
+    }
+
+    .guide-item {
+        background: rgba(255, 255, 255, 0.06);
+        border-left: 4px solid #C69BFF;
+        border-radius: 12px;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .guide-item h3 {
+        color: #E5C9FF;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .guide-item p {
+        font-size: 15px;
+        color: #F1E8FF;
+        margin-bottom: 0;
+    }
+
+    .music-panel {
+        background: rgba(166, 107, 219, 0.1);
+        border: 1px solid #8053B5;
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 30px auto;
     }
 
     .music-title {
         font-size: 22px;
         color: #D6B4FF;
+        font-weight: bold;
     }
 
     audio {
         width: 300px;
         max-width: 100%;
     }
+
+    .button {
+        background: linear-gradient(135deg, #C69BFF, #9054C9);
+        color: #211638;
+        padding: 16px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        border: 2px solid #E5C9FF;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 14px rgba(198, 155, 255, 0.2);
+        margin: 8px;
+    }
+
+    .button:hover {
+        transform: scale(1.07);
+        background: linear-gradient(135deg, #F1E8FF, #C69BFF);
+        box-shadow: 0 0 22px #C69BFF;
+    }
+
+    .bottom-note {
+        color: #B9A2D6;
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 25px;
+    }
+
+    .hint {
+        color: #C69BFF;
+        font-size: 15px;
+        font-style: italic;
+        margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 34px;
+        }
+
+        .container {
+            padding: 20px 12px;
+        }
+
+        .decorations {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        .feature-grid {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <p class="decorations">
 💎 🎒 ⭐ 🏆 💎 🎒 ⭐ 🏆 💎
 </p>
 
+<div class="top-label">
+DANDY'S WORLD ITEM DATABASE
+</div>
+
 <h1 id="trinketTitle">
-💎 Trinkets 💎
+💎 TRINKETS 💎
 </h1>
 
 <p class="welcome">
 ⭐ Welcome to my Trinkets page! ⭐
 </p>
 
-<p class="description">
-Trinkets are special items which increase extraction speed, skillcheck, stealth, stamina speed stats, give items, give tapes to purchase items from Dandys Elevator Shop, highlight items, assist with machines by giving a kick start, and to protect you.
-</p>
+<div class="intro-panel">
 
 <p class="description">
-Some trinkets are gained from being bought from Dandy's Lobby Shop, and some are recieved from completing a toons research by getting in contact with the twisted (the twisted chasing you or taking off one of your hearts) and picking up a research capsule.
+Trinkets are special items that give toons different advantages
+during a run. They can improve stats, provide useful items,
+highlight objects and even help protect you!
+</p>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="section-title">
+✨ WHAT CAN TRINKETS DO? ✨
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>⚡ Better Stats</h3>
+<p>
+Increase extraction speed, skillcheck, stealth, stamina and other useful stats.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>🎁 Give Items</h3>
+<p>
+Some trinkets provide useful items to help you during your run.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>🎟️ Earn Tapes</h3>
+<p>
+Certain trinkets can help you obtain tapes to spend in Dandy's Elevator Shop.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>🔦 Highlight Items</h3>
+<p>
+Some trinkets help you locate items and make exploring easier.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>🔧 Help Machines</h3>
+<p>
+Certain trinkets can give machines a helpful kick-start.
+</p>
+</div>
+
+<div class="feature-card">
+<h3>🛡️ Protection</h3>
+<p>
+Some trinkets provide ways to help protect your toon.
+</p>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="section-title">
+📦 WHERE DO TRINKETS COME FROM?
+</p>
+
+<div class="guide-panel">
+
+<div class="guide-item">
+<h3>🛒 Dandy's Lobby Shop</h3>
+<p>
+Some trinkets can be purchased from Dandy's Lobby Shop.
+</p>
+</div>
+
+<div class="guide-item">
+<h3>🧪 Research Capsules</h3>
+<p>
+Other trinkets are unlocked by completing a toon's research.
+This involves encountering their Twisted and collecting research capsules.
+</p>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<p style="color:#D6B4FF;font-size:22px;font-weight:bold;">
+WHERE TO NEXT?
 </p>
 
 <p>
 <a href="information.html">
 <button class="button">
-📖 ⭐ Information ⭐ 📖
+📖 EXPLORE INFORMATION 📖
 </button>
 </a>
 </p>
 
+<div class="music-panel">
+
 <p class="music-title">
-🎵 Trinket Music 🎵
+🎵 TRINKET MUSIC 🎵
 </p>
 
-<p>
-<audio controls autoplay loop>
+<p style="color:#E5C9FF;font-size:14px;">
+Listen while exploring!
+</p>
+
+<audio controls loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
-</p>
+
+</div>
 
 <p>
 <a href="index.htm">
 <button class="button">
-🏠 💎 Back to Home 💎 🏠
+🏠 BACK TO HOME 🏠
 </button>
 </a>
 </p>
 
+<p class="bottom-note">
+Every trinket has a purpose... but some secrets are worth more than treasure.
+</p>
+
+<div class="divider"></div>
+
 <p class="decorations">
 🏆 ⭐ 💎 🎒 ⭐ 🏆 💎 🎒 ⭐
 </p>
+
+<p class="hint">
+Gigi has a little secret for those who know where to look...
+try giving the title a little attention! 💎😉
+</p>
+
+</div>
 
 <script>
 let secretClicks = 0;
