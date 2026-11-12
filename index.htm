@@ -8,9 +8,23 @@
 
 <p style="text-align:center;font-size:20px;color:white;">Welcome to the first ever website that I have made!</p>
 
-<p style="text-align:center;font: size 16px;color:white;">If your a Dandy's World fan or a new person to Dandy's World feel free to press this button down below!</p>
+<p style="text-align:center;font-size:16px;color:white;">If you're a Dandy's World fan or a new person to Dandy's World, feel free to press this button down below!</p>
 
 <img src="image.png" width="350" style="display:block; margin:auto; border-radius:15px;">
+
+<br>
+
+<p style="text-align:center;color:white;">🎵 Game Lobby Music 🎵</p>
+
+<p style="text-align:center;">
+
+<audio controls autoplay loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+</p>
 
 <p style="text-align:center;">
 
@@ -32,15 +46,23 @@
 
 </p>
 
-<p style="text-align:center;">
+<script>
 
-<audio controls>
+let secretCount = 0;
 
-<source src="music.mp3" type="audio/mpeg">
+document.querySelector("img").addEventListener("click", function() {
 
-</audio>
+secretCount++;
 
-</p>
+if (secretCount === 10) {
+
+window.location.href = "secret.html";
+
+}
+
+});
+
+</script>
 
 </body>
 
