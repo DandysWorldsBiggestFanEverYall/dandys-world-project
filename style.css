@@ -1,0 +1,126 @@
+/* ==========================================
+   style.css
+   CSS = Cascading Style Sheets
+   Every rule looks like this:
+
+   selector {
+     property: value;
+   }
+
+   The selector says WHICH element to style.
+   The property says WHAT to change.
+   The value says HOW to change it.
+   ========================================== */
+
+
+/* ----- The whole page ----- */
+body {
+  font-family: Arial, sans-serif;   /* the font */
+  background-color: #f0f4f8;        /* light blue-grey background */
+  color: #222222;                   /* text colour */
+  margin: 0;                        /* remove the default gap around the page */
+  line-height: 1.6;                 /* space between lines of text */
+}
+
+
+/* ----- Header ----- */
+header {
+  background-color: #2b6cb0;        /* blue */
+  color: white;
+  text-align: center;               /* centre the text */
+  padding: 30px 20px;               /* space INSIDE the box */
+}
+
+header h1 {
+  margin: 0;                        /* space OUTSIDE the box */
+  font-size: 40px;
+}
+
+
+/* ----- Navigation links ----- */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;            /* remove the underline */
+  padding: 8px 14px;
+  margin: 0 4px;
+  border-radius: 6px;               /* rounded corners */
+}
+
+/* :hover happens when the mouse is over the link */
+nav a:hover {
+  background-color: #1a4a80;        /* darker blue */
+}
+
+
+/* ----- Main content ----- */
+main {
+  max-width: 700px;                 /* don't get wider than 700px */
+  margin: 20px auto;                /* "auto" centres the box on the page */
+  padding: 0 20px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #d0d7de;        /* thin grey outline */
+}
+
+h2 {
+  color: #2b6cb0;
+  border-bottom: 2px solid #2b6cb0; /* line under the heading */
+  padding-bottom: 6px;
+}
+
+
+/* ----- Links in the page ----- */
+a {
+  color: #2b6cb0;
+}
+
+
+/* ----- Table ----- */
+table {
+  border-collapse: collapse;        /* join the cell borders together */
+  width: 100%;
+}
+
+th, td {                            /* a comma lets us style two things at once */
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #2b6cb0;
+  color: white;
+}
+
+/* Colour every second row to make the table easier to read */
+tr:nth-child(even) td {
+  background-color: #eef3f8;
+}
+
+
+/* ----- A CLASS ----- */
+/* A class starts with a dot. In the HTML we wrote: <div class="fun-fact"> */
+.fun-fact {
+  background-color: #fff8d6;        /* light yellow */
+  border-left: 6px solid #f6ad00;   /* orange stripe on the left */
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+
+/* ----- Footer ----- */
+footer {
+  background-color: #1a202c;        /* dark blue-grey */
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
