@@ -1,81 +1,134 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 
- <html> 
+<head>
+<style>
+    body {
+        background-color: #211638;
+        color: #F1E8FF;
+        font-family: Verdana, sans-serif;
+        font-size: 19px;
+        line-height: 1.8;
+        margin: 25px;
+    }
 
- <body style="background-color:khaki"> 
+    h1 {
+        color: #D6B4FF;
+        font-size: 42px;
+        text-align: center;
+        cursor: pointer;
+    }
 
- <p style="text-align:center;font-size:24px;">💎 🎒 ⭐ 🏆 💎 🎒 ⭐ 🏆 💎</p> 
+    p {
+        text-align: center;
+    }
 
- <h1 id="trinketTitle" style="color:darkgreen;font-family:verdana;text-align:center;">💎 Trinkets 💎</h1> 
+    .decorations {
+        font-size: 30px;
+    }
 
- <p style="text-align:center;font-size:20px;">⭐ Welcome to my Trinkets page! ⭐</p> 
+    .welcome {
+        font-size: 25px;
+        color: #E5C9FF;
+    }
 
- <p style="text-align:center;font-size:14px;">Trinkets are special items which increase extraction speed, skillcheck, stealth, stamina speed stats, give items, give tapes to purchase items from Dandys Elevator Shop, highlight items, assist with machines by giving a kick start, and to protect you.</p> 
+    .description {
+        font-size: 19px;
+        max-width: 950px;
+        margin: 20px auto;
+    }
 
- <p style="text-align:center;font-size:14px;">Some trinkets are gained from being bought from Dandy's Lobby Shop, and some are recieved from completing a toons research by getting in contact with the twisted (the twisted chasing you or taking off one of your hearts) and picking up a research capsule.</p> 
+    .button {
+        background-color: #A66BDB;
+        color: white;
+        padding: 16px 30px;
+        font-size: 19px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
 
- <p style="text-align:center;"> 
+    .button:hover {
+        background-color: #C69BFF;
+        color: #211638;
+    }
 
- <a href="information.html"> 
+    .music-title {
+        font-size: 22px;
+        color: #D6B4FF;
+    }
 
- <button style="background-color:darkorange;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;"> 
+    audio {
+        width: 300px;
+        max-width: 100%;
+    }
+</style>
+</head>
 
- 📖 ⭐ Information ⭐ 📖 
+<body>
 
- </button> 
+<p class="decorations">
+💎 🎒 ⭐ 🏆 💎 🎒 ⭐ 🏆 💎
+</p>
 
- </a> 
+<h1 id="trinketTitle">
+💎 Trinkets 💎
+</h1>
 
- </p> 
+<p class="welcome">
+⭐ Welcome to my Trinkets page! ⭐
+</p>
 
- <p style="text-align:center;"> 
+<p class="description">
+Trinkets are special items which increase extraction speed, skillcheck, stealth, stamina speed stats, give items, give tapes to purchase items from Dandys Elevator Shop, highlight items, assist with machines by giving a kick start, and to protect you.
+</p>
 
- 🎵 Trinket Music 🎵 
+<p class="description">
+Some trinkets are gained from being bought from Dandy's Lobby Shop, and some are recieved from completing a toons research by getting in contact with the twisted (the twisted chasing you or taking off one of your hearts) and picking up a research capsule.
+</p>
 
- </p> 
+<p>
+<a href="information.html">
+<button class="button">
+📖 ⭐ Information ⭐ 📖
+</button>
+</a>
+</p>
 
- <p style="text-align:center;"> 
+<p class="music-title">
+🎵 Trinket Music 🎵
+</p>
 
- <audio controls autoplay loop> 
+<p>
+<audio controls autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+</p>
 
- <source src="music.mp3" type="audio/mpeg"> 
+<p>
+<a href="index.htm">
+<button class="button">
+🏠 💎 Back to Home 💎 🏠
+</button>
+</a>
+</p>
 
- </audio> 
+<p class="decorations">
+🏆 ⭐ 💎 🎒 ⭐ 🏆 💎 🎒 ⭐
+</p>
 
- </p> 
+<script>
+let secretClicks = 0;
 
- <p style="text-align:center"> 
+document.getElementById("trinketTitle").addEventListener("click", function() {
+    secretClicks++;
 
- <a href="index.htm"> 
+    if (secretClicks >= 3) {
+        window.location.href = "gigisecret.html";
+    }
+});
+</script>
 
- <button style="background-color:darkgreen;color:white;padding:12px 24px;font-size:16px;border:none;border-radius:20px;"> 
-
- 🏠 💎 Back to Home 💎 🏠 
-
- </button> 
-
- </a> 
-
- </p> 
-
- <p style="text-align:center;font-size:24px;">🏆 ⭐ 💎 🎒 ⭐ 🏆 💎 🎒 ⭐</p> 
-
-
-
-<script> 
- let secretClicks = 0; 
-
- document.getElementById("trinketTitle").addEventListener("click", function() { 
- secretClicks++; 
-
- if (secretClicks >= 3) { 
- window.location.href = "gigisecret.html"; 
- } 
- }); 
- </script>
-
-
-
- </body> 
-
- </html>
+</body>
+</html>
