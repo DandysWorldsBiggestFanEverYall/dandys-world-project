@@ -2,74 +2,186 @@
 <html>
 
 <head>
+<title>Dandy's World - Characters</title>
+
 <style>
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        background-color: #30182B;
+        background:
+            radial-gradient(circle at top, #633052, transparent 45%),
+            linear-gradient(135deg, #160C20, #30182B, #100817);
         color: #FFF0F7;
         font-family: Verdana, sans-serif;
-        font-size: 19px;
+        font-size: 18px;
         line-height: 1.8;
-        margin: 25px;
+        margin: 0;
+        padding: 25px 15px;
+        min-height: 100vh;
     }
 
-    h1 {
-        color: #FF9BCB;
-        font-size: 42px;
-        text-align: center;
-    }
-
-    p {
+    .container {
+        max-width: 1050px;
+        margin: 25px auto;
+        padding: 35px 25px;
+        background: rgba(38, 15, 39, 0.91);
+        border: 2px solid #C85B9C;
+        border-radius: 30px;
+        box-shadow:
+            0 0 30px rgba(255, 120, 190, 0.18),
+            inset 0 0 25px rgba(255, 155, 203, 0.04);
         text-align: center;
     }
 
     .decorations {
-        font-size: 30px;
+        font-size: 27px;
+        letter-spacing: 6px;
+        color: #FFBBDD;
+        text-shadow: 0 0 12px #FF77BA;
+    }
+
+    .top-label {
+        display: inline-block;
+        background: rgba(255, 155, 203, 0.1);
+        border: 1px solid #FF9BCB;
+        border-radius: 30px;
+        padding: 7px 20px;
+        color: #FFBBDD;
+        font-size: 13px;
+        letter-spacing: 3px;
+        margin-top: 15px;
+    }
+
+    h1 {
+        color: #FF9BCB;
+        font-size: 46px;
+        text-align: center;
+        text-shadow:
+            0 0 10px #DB579B,
+            0 0 25px rgba(255, 155, 203, 0.5);
+        margin: 20px 0;
     }
 
     .welcome {
-        font-size: 25px;
+        font-size: 24px;
         color: #FFBBDD;
-    }
-
-    .section-title {
-        font-size: 27px;
-        color: #FF9BCB;
         font-weight: bold;
     }
 
     .description {
-        font-size: 19px;
+        font-size: 17px;
         color: #FFF0F7;
-        max-width: 1000px;
+        max-width: 850px;
         margin: 20px auto;
     }
 
-    .categories {
-        font-size: 18px;
-        color: #FFE1EF;
-        max-width: 950px;
-        margin: 20px auto;
+    .intro-panel {
+        background: rgba(219, 87, 155, 0.1);
+        border: 1px solid #A74780;
+        border-radius: 22px;
+        padding: 22px;
+        max-width: 850px;
+        margin: 25px auto;
     }
 
-    .button {
-        background-color: #DB579B;
-        color: white;
-        padding: 16px 30px;
-        font-size: 19px;
+    .divider {
+        width: 75%;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #FF9BCB, transparent);
+        margin: 35px auto;
+    }
+
+    .section-title {
+        font-size: 28px;
+        color: #FF9BCB;
         font-weight: bold;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
+        text-shadow: 0 0 12px rgba(255, 155, 203, 0.4);
+        margin-top: 30px;
     }
 
-    .button:hover {
-        background-color: #FF9BCB;
-        color: #30182B;
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 18px;
+        max-width: 950px;
+        margin: 25px auto;
+    }
+
+    .category-card {
+        background: linear-gradient(145deg, #492342, #29152E);
+        border: 1px solid #B95A91;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0 0 12px rgba(255, 155, 203, 0.08);
+        transition: 0.3s;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        border-color: #FF9BCB;
+        box-shadow: 0 0 18px rgba(255, 155, 203, 0.25);
+    }
+
+    .category-card h3 {
+        color: #FFBBDD;
+        font-size: 19px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .category-card p {
+        color: #FFE1EF;
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    .favourite-panel {
+        background: linear-gradient(135deg, #542448, #30182B);
+        border: 2px solid #E879B8;
+        border-radius: 24px;
+        padding: 25px;
+        max-width: 900px;
+        margin: 25px auto;
+        box-shadow: 0 0 20px rgba(232, 121, 184, 0.12);
+    }
+
+    .favourite {
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 16px;
+        margin: 15px 0;
+        border-left: 4px solid #FF9BCB;
+    }
+
+    .favourite h3 {
+        color: #FFBBDD;
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .favourite p {
+        color: #FFF0F7;
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+
+    .music-panel {
+        background: rgba(219, 87, 155, 0.1);
+        border: 1px solid #A74780;
+        border-radius: 20px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 30px auto;
     }
 
     .music-title {
         font-size: 22px;
         color: #FFBBDD;
+        font-weight: bold;
     }
 
     audio {
@@ -77,74 +189,206 @@
         max-width: 100%;
     }
 
+    .button {
+        background: linear-gradient(135deg, #FF9BCB, #DB579B);
+        color: #30182B;
+        padding: 16px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        border: 2px solid #FFD7EB;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 14px rgba(255, 155, 203, 0.2);
+        margin: 8px;
+    }
+
+    .button:hover {
+        transform: scale(1.07);
+        background: linear-gradient(135deg, #FFE1EF, #FF9BCB);
+        box-shadow: 0 0 22px #FF9BCB;
+    }
+
+    .bottom-note {
+        color: #C99AB9;
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 25px;
+    }
+
     #moon {
         color: #30182B;
-        font-size: 12px;
+        font-size: 18px;
         cursor: pointer;
+        user-select: none;
+        margin: 15px auto 0;
+        width: fit-content;
+    }
+
+    #moon:hover {
+        color: #FFBBDD;
+        text-shadow: 0 0 15px #FF9BCB;
+    }
+
+    .moon-hint {
+        color: #FFBBDD;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 32px;
+        }
+
+        .container {
+            padding: 20px 12px;
+        }
+
+        .decorations {
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+
+        .category-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <p class="decorations">
-😉 😊 😋 ☺️ 😚 😙 😊 😉 😋
+🌙 💗 ✨ 🌸 ✨ 💗 🌙
 </p>
 
+<div class="top-label">
+DANDY'S WORLD CHARACTER DATABASE
+</div>
+
 <h1>
-😊 Characters 😊
+🌸 CHARACTERS 🌸
 </h1>
 
 <p class="welcome">
-😉 Welcome to my Characters page! 😉
+Welcome to my Characters page!
 </p>
+
+<div class="intro-panel">
 
 <p class="description">
-There are many types of characters in Dandys World. There are main toons, support toons, extracting toons, distracting toons and event toons. Every toon fits into a category. Some of the toons who don't fit into a category are the toons that are labeled "just there".
+There are many different types of characters in Dandy's World!
+Every toon has their own role, abilities and way of helping the team.
+Explore the categories below to learn more!
 </p>
 
-<p class="categories">
-<b>Main toons =</b> These toons have one more ability than all other toons and they have one less heart for exchange of another ability.
+</div>
 
-<br><br>
-
-<b>Support toons =</b> These toons have the ability to help others gain stealth, extracting speed, skillcheck, speed and stamina with the use of their ability.
-
-<br><br>
-
-<b>Extracting toons =</b> These toons have higher extraction speed or higher skillcheck or both.
-
-<br><br>
-
-<b>Distracting toons =</b> These toons have higher stamina or speed or both so they can protect others from Twisteds.
-
-<br><br>
-
-<b>Just there =</b> The toons who can't benefit themself or others in the game.
-</p>
+<div class="divider"></div>
 
 <p class="section-title">
-😚 Favourite Toons 😚
+✨ TOON CATEGORIES ✨
 </p>
 
-<p class="description">
-My favourite Dandys World toons are Astro, for his ability to support others with a fast speed regeneration and when blackouts occur, he lights up as he takes display of a moon. Gigi because of her ability to gamble herself items and good extraction and Goob for his ability to pull others if they are in danger or need help arriving into the elevator. 😊✨
+<div class="category-grid">
+
+<div class="category-card">
+<h3>⭐ Main Toons</h3>
+<p>
+These toons have one more ability than all other toons and one less heart in exchange for another ability.
 </p>
+</div>
+
+<div class="category-card">
+<h3>💗 Support Toons</h3>
+<p>
+These toons help others with stealth, extraction speed, skillchecks, speed and stamina using their abilities.
+</p>
+</div>
+
+<div class="category-card">
+<h3>⚡ Extracting Toons</h3>
+<p>
+These toons have higher extraction speed, higher skillcheck or both.
+</p>
+</div>
+
+<div class="category-card">
+<h3>🏃 Distracting Toons</h3>
+<p>
+These toons have higher stamina, speed or both, allowing them to distract Twisteds and protect others.
+</p>
+</div>
+
+<div class="category-card">
+<h3>🎭 Just There</h3>
+<p>
+These are the toons who don't have an ability that directly benefits themselves or others in the game.
+</p>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="section-title">
+😚 MY FAVOURITE TOONS 😚
+</p>
+
+<div class="favourite-panel">
+
+<div class="favourite">
+<h3>🌙 Astro</h3>
+<p>
+Astro is one of my favourites because of his ability to support others with fast stamina regeneration. During blackouts, he also lights up with a beautiful moon display!
+</p>
+</div>
+
+<div class="favourite">
+<h3>🎲 Gigi</h3>
+<p>
+Gigi is a favourite because of her ability to gamble for items, as well as her good extraction abilities.
+</p>
+</div>
+
+<div class="favourite">
+<h3>🤗 Goob</h3>
+<p>
+Goob is a favourite because he can pull others towards him if they're in danger or need help reaching the elevator.
+</p>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="music-panel">
 
 <p class="music-title">
-🎵 Character Music 🎵
+🎵 CHARACTER MUSIC 🎵
 </p>
 
-<p>
-<audio controls autoplay loop>
+<p style="color:#FFD7EB;font-size:14px;">
+Listen while exploring the toons!
+</p>
+
+<audio controls loop>
 <source src="music.mp3" type="audio/mpeg">
 </audio>
+
+</div>
+
+<p style="color:#FFBBDD;font-size:22px;font-weight:bold;">
+WHERE TO NEXT?
 </p>
 
 <p>
 <a href="trinkets.html">
 <button class="button">
-😋 💖 Trinkets 💖 😋
+💎 EXPLORE TRINKETS 💎
 </button>
 </a>
 </p>
@@ -152,18 +396,30 @@ My favourite Dandys World toons are Astro, for his ability to support others wit
 <p>
 <a href="index.htm">
 <button class="button">
-😊 🏡 Back to Home 🏡 😊
+🏡 BACK TO HOME 🏡
 </button>
 </a>
 </p>
 
+<p class="bottom-note">
+Every toon has a story... and some secrets are hidden in plain sight.
+</p>
+
+<div class="divider"></div>
+
 <p class="decorations">
-😉 😊 😋 ☺️ 😚 😙 😊 😉 😋
+🌸 💗 🌙 ✨ 🌙 💗 🌸
 </p>
 
 <p id="moon" onclick="window.location.href='supersecret.html'">
 🌙
 </p>
+
+<p class="moon-hint">
+Look beyond the characters... something is hiding in the dark. 😉
+</p>
+
+</div>
 
 </body>
 </html>
